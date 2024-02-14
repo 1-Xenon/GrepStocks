@@ -1,0 +1,1126 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'League Spartan', sans-serif;
+}
+
+body{
+    height: 100%;
+    background-color: white;
+}
+
+h1{
+    font-size: 50px;
+    line-height: 64px;
+    color: #222;
+}
+
+h2{
+    font-size: 46px;
+    line-height: 54px;
+    color: #222;
+}
+
+h4{
+    font-size: 20px;
+    color: #222;
+}
+
+h6{
+    font-weight: 700;
+    font-size: 12px;
+}
+
+p{
+    font-size: 16px;
+    color: #465b52;
+    margin: 15px 0 20px 0;
+}
+
+.section-p1{
+    padding: 40px 80px;
+}
+
+#homePage {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+#FAQs, #locateUs{
+    width: 45%; 
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+
+
+
+
+/* Header */
+
+.menu-btn{
+    color: #424144;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
+.navbar{
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    z-index: 999;
+    background-color: #11141a;
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.3);
+}
+
+.navbar .logo h1{
+    font-size: 50px;
+    color: white;
+    border-bottom: 4px solid#fd6561;
+}
+
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar .menu li a{
+    display: block;
+    margin-left: 20px;
+    color: white;
+    border-bottom: 4px solid transparent;
+    text-decoration: none;
+    font-size: 23px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.navbar .menu .nav-item.active a {
+  color: #f63e4e; /* Red color for active item text */
+  font-weight: bold; /* Optional: make it bold */
+  border-bottom: 4px solid #f63e4e; /* Underline or border for active item */
+}
+
+
+.navbar .menu li a i{
+    color: #f63e4e;
+}
+
+.navbar .menu li a:hover{
+    color: #f63e4e;
+}
+
+/* Content */
+
+.search-bar{
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #424144;
+    height: 20vh;
+
+}
+
+.search-bar h1{
+    font-size: 50px;
+    color: #11141a;
+}
+
+.search-bar h4{
+    font-size: 30px;
+    font-weight: 400;
+    color: #606063;
+    padding-top: 10px;
+}
+
+/* Search bar */
+.search-input-box {
+    position: relative;
+    height: 60px;
+    max-width: 750px;
+    width: 100%;
+    background: #fff;
+    margin: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    
+}
+.search-input-box i,
+.search-input-box .search-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.search-input-box i {
+    left: 20px;
+    font-size: 30px;
+    color: #707070;
+}
+.search-input-box input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    font-size: 18px;
+    font-weight: 400;
+    border: none;
+    padding: 0 155px 0 65px;
+    background-color: transparent;
+}
+.search-input-box .search-btn {
+    right: 20px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 10px;
+    background-color: #f63e4e;
+    cursor: pointer;
+}
+.search-input-box .search-btn:active {
+    transform: translateY(-50%) scale(0.98);
+}
+/* Responsive */
+@media screen and (max-width: 500px) {
+    .search-input-box {
+      height: 66px;
+      margin: 0 8px;
+    }
+    .search-input-box i {
+      left: 12px;
+      font-size: 25px;
+    }
+    .search-input-box input {
+      padding: 0 112px 0 50px;
+    }
+    .search-input-box .search-btn {
+      right: 12px;
+      font-size: 14px;
+      padding: 8px 18px;
+    }
+  }
+
+/* Product page */
+
+#product1{
+    text-align: center;
+}
+
+#product1 .pro-container{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+#product1 .pro{
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid #ffdadd;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.1);
+    margin-right: 2%; /* Right margin */
+    margin-bottom: 15px; /* Bottom margin */
+    position: relative;
+}
+
+#product1 .pro:hover {
+    transform: scale(1.04);
+    transition: all 1s ease;
+}
+
+#product1 .pro img{
+    height: 300px;
+    width: 100%;
+    border-radius: 20px;
+}
+
+#product1 .pro .des{
+    text-align: start;
+    padding: 5px 0;
+}
+
+#product1 .pro .des span{
+    color: #606063;
+    padding-left: 5px;
+    font-size: 17px;
+}
+
+#product1 .pro .des h5{
+    padding-top: 5px;
+    padding-left: 5px;
+    color: #1a1a1a;
+    font-size: 25px;
+}
+
+#product1 .pro .des i{
+    padding-top: 5px;
+    font-size: 15px;
+    padding-left: 5px;
+    color: rgb(243, 181, 25);
+}
+
+#product1 .pro .des h4{
+    padding-top: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    padding-left: 5px;
+    color: #f63e4e;
+}
+
+#product1 .pro .learn-btn{
+    color: #f63e4e;
+    font-size: 16px;
+    padding: 10px 15px;
+    font-weight: 900;
+    border: 1px solid #f63e4e;
+    border-radius: 20px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
+
+#product1 .pro .learn-btn:hover{
+    cursor: pointer;
+    background-color: #f63e4e;
+    color: white;
+    transition: .3s;
+
+}
+/*footer*/
+
+body, .main-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Use viewport height to make sure the content takes minimum full height of the viewport */
+  }
+  
+  .content-wrap {
+    flex: 1; /* This will push the footer down */
+  }
+  
+  /* Footer styles */
+  footer {
+    background-color: #f5f5f5;
+    width: 100%;
+  }
+  
+  footer p {
+    text-align: center;
+    line-height: 10vh; /* Adjust the line height to match footer height if necessary */
+  }
+  
+  footer p a {
+    text-decoration: none;
+    color: #f63e4e;
+    font-weight: bold;
+  }
+  
+
+
+.center { 
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+  }
+.table2{
+    margin-left: auto;
+    margin-right: auto;   
+}
+.table2 tr{
+    border: 1px solid #ddd;
+    padding:8px;
+    text-align:left;
+    background-color: #f2f2f2;
+}
+.table2 td{
+    border: 1px solid #ddd;
+    padding:8px;
+    text-align:left;
+}
+
+
+/* footer */
+
+footer{
+    background-color: #f5f5f5;
+    position:relative;
+    height: 10vh;
+    width: 100%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+}
+
+footer p{
+    text-align: center;
+    line-height: 8vh;
+}
+
+footer p a{
+    text-decoration: none;
+    color: #f63e4e;
+    font-weight: bold;
+}
+
+/* single product detail */
+
+#prodetails{
+    display: flex;
+    margin-top: 20px;
+}
+
+#prodetails .single-pro-image{
+    width: 40%;
+    margin-right: 50px;
+    border-radius: 20px;
+    padding: 10px 15px;
+    border: 2px solid #ffdadd;
+    border-radius: 25px;
+    height: 630px;
+}
+
+#prodetails .single-pro-image img{
+    height: 600px;
+    border-radius: 20px;
+}
+
+#prodetails .single-pro-details{
+    width: 55%;
+    padding-top: 20px;
+}
+
+#prodetails .single-pro-details h6{
+    font-size: 25px;
+}
+
+#prodetails .single-pro-details h4{
+    padding: 44px 0 20px 0;
+    font-size: 40px;
+}
+
+#prodetails .single-pro-details h2{
+    font-size: 30px;
+}
+
+#prodetails .single-pro-details select {
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+#prodetails .single-pro-details input{
+    width: 50px;
+    height: 47px;
+    padding-left: 13px;
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+#prodetails .single-pro-details input:focus{
+    outline: none;
+}
+
+#prodetails .single-pro-details .add-to-cart-btn{
+    display: block;
+    color: #f63e4e;
+    font-size: 20px;
+    margin-top: 15px;
+    padding: 10px 15px;
+    font-weight: 700;
+    border: 1px solid #f63e4e;
+    border-radius: 20px;
+    bottom: 15px;
+    right: 15px;
+}
+
+#prodetails .single-pro-details .add-to-cart-btn:hover{
+    cursor: pointer;
+    background-color: #f63e4e;
+    color: white;
+    transition: .3s;
+
+}
+
+#prodetails .single-pro-details .review-btn{
+    color: rgb(243, 181, 25);
+    font-size: 20px;
+    margin-top: 15px;
+    padding: 10px 15px;
+    font-weight: 700;
+    border: 1px solid rgb(243, 181, 25);
+    border-radius: 20px;
+    
+    bottom: 15px;
+    right: 15px;
+}
+
+#prodetails .single-pro-details .review-btn:hover{
+    cursor: pointer;
+    background-color: rgb(243, 181, 25);
+    color: white;
+    transition: .3s;
+
+}
+
+#prodetails .single-pro-details span{
+    line-height: 30px;
+    font-size: 22px;
+}
+
+/* reviews */
+
+#reviews{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    
+}
+
+.reviews-heading{
+    letter-spacing: 1px;
+    margin: 30px 0px;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.reviews-heading h1{
+    display: flex;
+    align-items: center;
+    font-size: 2.2rem;
+    font-weight: 500;
+    background-color: #11141a;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.reviews-heading span{
+   font-size: 1.3rem;
+   color: #11141a; 
+   margin-bottom: 10px;
+   letter-spacing: 2px;
+   text-transform: uppercase;
+}
+
+.reviews-heading .avr-rating{
+    display: flex;
+    align-items: center;
+}
+
+.reviews-heading .avr-rating .avr-rating-stars{
+    color: rgb(243, 181, 25);
+    font-size: 35px;
+    margin-left: 10px;
+}
+
+.reviews-heading .add-review-btn{
+    display: block;
+    color: #f63e4e;
+    font-size: 25px;
+    padding: 10px 15px;
+    font-weight: 700;
+    border: 1px solid #f63e4e;
+    width: 308.25px;
+    margin-bottom: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    
+}
+
+
+.reviews-heading .add-review-btn:hover{
+    cursor: pointer;
+    background-color: #f63e4e;
+    color: white;
+    transition: .3s;
+
+}
+
+.reviews-box-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+
+}
+
+.reviews-box-container .review-box{
+    width: 500px;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.13);
+    background-color: #fff;
+    padding: 20px;
+    margin: 15px;
+    cursor: pointer;
+}
+
+.pfp-img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.pfp-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+}
+
+.username{
+    display: flex;
+    flex-direction: column;
+}
+
+.username strong{
+    color: #11141a;
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+}
+
+.username span{
+    color: #3d3d3d;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+
+.star{
+    color: rgb(243, 181, 25);
+}
+
+.rating-num-and-star{
+    display: flex;
+    align-items: center;
+}
+
+.review-btns {
+    display:flex;
+    margin-left: 75px;
+  
+}
+
+.review-btns .edit{
+    font-size: 18px;
+    padding: 0px 5px;
+}
+
+.review-btns .trash{
+    font-size: 18px;
+    padding: 0px 5px;
+}
+
+.box-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.customer-comment p{
+    font-size: 1.1rem;
+    color: #424144;
+
+}
+
+.review-box:hover{
+    transform: translateY(-10px);
+    transition: all ease 0.3s;
+}
+
+@media(max-width:1060px){
+    .review-box{
+        width: 45%;
+        padding: 10px;
+    }
+}
+
+@media(max-width:790px){
+    .review-box{
+        width: 100%;
+    }
+
+    .reviews-heading h1{
+        font-size: 1.4rem;
+    }
+}
+
+@media(max-width:340px){
+    .box-top{
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+    }
+
+    .reviews{
+        margin-top: 10px;
+    }
+}
+
+::selection{
+    color: #f5f5f5;
+    background-color:#1a1a1a;
+}
+
+/* Add Review form */
+.add-review-popup{
+    position: relative;
+    top: 50px;
+    width: 100%;
+    height: 75%;
+}
+
+.add-review-popup .add-review-popup-content{
+    position: relative;
+    width: 95%;
+    left: 35%;
+    max-width: 650px;
+    height: 525px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0px 2px 2px 5px rgba(0, 0, 0, 0.05);
+    transition: all 300ms ease-in-out;
+    z-index: 9999;
+}
+
+.add-review-popup .add-review-popup-content h2{
+    font-size: 25px;
+    color: #11141a;
+    text-align: center;
+    
+}
+
+.add-review-popup .add-review-popup-content p{
+    margin-bottom: 5px;
+    margin-left: 5px;
+    font-size: 18px;
+    color: #222;
+    text-align: start;
+    
+}
+
+.add-review-popup .add-review-popup-content .controls{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px 0px;
+}
+
+.add-review-popup .add-review-popup-content .controls button {
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.add-review-popup .add-review-popup-content .controls .close-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #0000EE; /* Typical link color */
+    background-color: #f5f5f5;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    background-color: #e9e9e9;
+}
+
+.add-review-popup .add-review-popup-content .controls .submit.btn{
+    background: #f63e4e;
+    color: #fff;
+}
+
+.add-review-popup .add-review-popup-content textarea{
+    width: 100%;
+    background: #ececec;
+    padding: 1rem;
+    border-radius: .75rem;
+    border: 1px solid #11141a;
+    outline: none;
+    resize: none;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.add-review-popup .add-review-popup-content .add-review-rating{
+    display: flex;
+    align-items: start;
+    grid-gap: .5rem;
+    font-size: 2rem;
+    color: rgb(243, 181, 25);
+}
+
+.add-review-popup .add-review-popup-content .add-review-rating .star{
+    margin-bottom: 15px;
+    z-index: 10000;
+    cursor: pointer;
+}
+
+.add-review-popup .add-review-popup-content .add-review-rating .star.active{
+  
+    animation: animate .5s calc(var(--i) * .1s) forwards;
+}
+
+@keyframes animate {
+	0% {
+		opacity: 0;
+		transform: scale(1);
+	}
+	50% {
+		opacity: 1;
+		transform: scale(1.2);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+.add-review-popup .add-review-popup-content .add-review-rating .star:hover{
+    transform: scale(1.1);
+}
+
+
+/* Edit review form */
+.edit-review-popup{
+    position: relative;
+    top: 80px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.edit-review-popup .edit-review-popup-content{
+    position: relative;
+    width: 95%;
+    left: 35%;
+    max-width: 650px;
+    height: 525px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0px 2px 2px 5px rgba(0, 0, 0, 0.05);
+    transition: all 300ms ease-in-out;
+    z-index: 9999;
+}
+
+.edit-review-popup .edit-review-popup-content h2{
+    font-size: 25px;
+    color: #11141a;
+    text-align: center;
+    
+}
+
+.edit-review-popup .edit-review-popup-content p{
+    margin-bottom: 5px;
+    margin-left: 5px;
+    font-size: 18px;
+    color: #222;
+    text-align: start;
+    
+}
+
+.edit-review-popup .edit-review-popup-content .controls{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px 0px;
+}
+
+.edit-review-popup .edit-review-popup-content .controls button {
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.edit-review-popup .edit-review-popup-content .controls .close-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #0000EE; /* Typical link color */
+    background-color: #f5f5f5;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.edit-review-popup .edit-review-popup-content .controls .submit.btn{
+    background: #f63e4e;
+    color: #fff;
+}
+
+.edit-review-popup .edit-review-popup-content textarea{
+    width: 100%;
+    background: #ececec;
+    padding: 1rem;
+    border-radius: .75rem;
+    border: 1px solid #11141a;
+    outline: none;
+    resize: none;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.edit-review-popup .edit-review-popup-content .edit-review-rating{
+    display: flex;
+    align-items: start;
+    grid-gap: .5rem;
+    font-size: 2rem;
+    color: rgb(243, 181, 25);
+}
+
+.edit-review-popup .edit-review-popup-content .edit-review-rating .star{
+    margin-bottom: 15px;
+    z-index: 10000;
+    cursor: pointer;
+}
+
+.edit-review-popup .edit-review-popup-content .edit-review-rating .star.active{
+    
+    animation: animate .5s calc(var(--i) * .1s) forwards;
+}
+
+@keyframes animate {
+	0% {
+		opacity: 0;
+		transform: scale(1);
+	}
+	50% {
+		opacity: 1;
+		transform: scale(1.2);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+.edit-review-popup .edit-review-popup-content .edit-review-rating .star:hover{
+    transform: scale(1.1);
+}
+
+
+
+
+.user-info {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  margin-top: 20px;
+}
+.user-info .profile-pic {
+      width: 100px; /* adjust as necessary */
+      height: 100px; /* adjust as necessary */
+      border-radius: 50%; /* creates a circular profile picture */
+      overflow: hidden; /* ensures the image doesn't overflow the circular boundary */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .profile-pic img {
+      width: 100%; /* ensures the image takes up the full width of the container */
+      height: auto; /* maintains the aspect ratio of the image */
+      object-fit: cover; /* ensures the image covers the area, cropping if necessary */
+    }
+    
+.user-details {
+  display: flex;
+  flex-direction: column;
+}
+.user-details h3, .user-details p {
+  margin: 0;
+}
+.actions {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  margin-top: 10px;
+  
+}
+.actions div {
+  margin-right: 10px;
+ 
+}
+
+
+.instruction {
+  display: block;
+  max-width: 400px; /* This should be the max-width of your input fields */
+  margin: 0 auto; /* This centers the text block if it's less than 100% width */
+  color: #000000;
+}
+
+
+
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #f63e4e;
+}
+
+
+
+.containerHome {
+    width: 48%; /* Adjust width as needed */
+    margin: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: inline-block; /* Keeps the containers side-by-side */
+    vertical-align: top; /* Aligns containers at the top */
+  }
+  .flex-containerHome {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allows containers to wrap on smaller screens */
+  }
+
+
+/* filter buttons */
+/* Style for the filter container */
+.filter-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+   
+  }
+  
+  /* Style for each filter button */
+  .filter-btn {
+    padding: 10px 20px;
+    border: none;
+    background-color: #ffffff; /* White background */
+    color: #333333; /* Dark grey text */
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  /* Style for the active filter button */
+  .filter-btn.active {
+    background-color: #4b7bec; /* Example of a blue background */
+    color: #ffffff; /* White text */
+    border: 1px solid #4b7bec; /* Blue border */
+  }
+  
+ 
+
+.filter-bar select,
+.filter-bar button {
+  outline: none;
+  border: 1px solid #cccccc; /* Light grey border */
+  border-radius: 5px; /* Slightly rounded corners */
+  padding: 8px 16px;
+  background-color: #f9f9f9; /* Light background */
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+
+
+/* Hover and focus styles */
+.filter-bar select:hover,
+.filter-bar button:hover,
+.filter-bar select:focus,
+.filter-bar button:focus {
+  border-color: #999999; /* Darker border on hover/focus */
+  background-color: #e9e9e9; /* Slightly darker background on hover/focus */
+}
+
+/* Styles for the dropdown select elements */
+.filter-bar select {
+  -webkit-appearance: none; /* Removes default styling on webkit browsers */
+  -moz-appearance: none; /* Removes default styling on Mozilla browsers */
+  appearance: none; /* Removes default arrow on IE */
+}
+
+/* Styles for the filter button */
+.filter-bar button {
+  background-color: #007bff; /* Bootstrap primary blue */
+  color: #ffffff; /* White text */
+  border: none; /* No border for the button */
+}
+
+/* Style for adding an arrow symbol to the select boxes */
+.filter-bar select {
+    background: url('data:image/svg+xml;charset=US-ASCII,<svg width="14" height="14" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill="%23999" d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.576 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-5.484 5.209-0.089 0.085-0.257 0.246-0.386 0.246s-0.297-0.161-0.386-0.246c-0.789-0.707-5.077-4.791-5.484-5.209-0.408-0.418-0.436-1.17 0-1.615z"/></svg>') no-repeat right 10px center;
+    background-color: #f9f9f9;
+    padding-right: 30px; /* Adjust padding to prevent text overlap with the background arrow */
+}
+
+.filter-bar select {
+    font-size: 16px; /* Increase font size */
+   
+}
+  
+  /* Style for the option element - may not be respected by all browsers */
+.filter-bar select option {
+    font-size: 16px; /* Increase font size */
+   
+}
